@@ -1,0 +1,144 @@
+:root {
+    --background-color: #0c7ed2;
+    --font-color: white;
+    --font-family: Segoe UI;
+
+    --ui-font-family: Segoe UI, system-ui, sans-serif;
+    --ui-accent-color: #0c7ed2;
+    --ui-accent-hover-color: #085891;
+    --ui-border-radius: 5px;
+    --ui-small-font-size: 14px;
+    --ui-font-size: 20px;
+    --ui-red: red;
+}
+
+:not(dialog) {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--ui-font-family);
+    font-size: var(--ui-font-size);
+}
+
+button,
+input {
+    font-family: var(--ui-font-family);
+    font-size: var(--ui-font-size);
+    background: none;
+    border: 2px solid var(--ui-accent-color);
+    border-radius: var(--ui-border-radius);
+    padding: 3px;
+}
+
+button {
+    color: var(--ui-accent-color);
+}
+
+button:hover {
+    cursor: pointer;
+    --ui-accent-color: var(--ui-accent-hover-color);
+}
+
+small {
+    font-size: var(--ui-small-font-size);
+}
+
+/* Main */
+body > div {
+    display: none;
+}
+
+[data-mode="controls"] #controls {
+    display: block;
+}
+
+[data-mode="bsod"] #bsod {
+    display: block;
+}
+
+/* Controls */
+#controls {
+    height: 100%;
+}
+
+#controls .main-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+#controls .button-wrapper {
+    display: inline-block;
+}
+
+/* BSOD */
+#bsod {
+    background-color: var(--background-color);
+    height: 100%;
+}
+
+#bsod * {
+    cursor: none;
+}
+
+#bsod .main-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#bsod .pos-wrapper {
+    width: 987px;
+    height: 660px;
+    color: var(--font-color);
+    font-family: var(--font-family);
+    padding-bottom: 200px;
+}
+
+#bsod .emoticon {
+    font-size: 195px;
+}
+
+#bsod .text {
+    font-size: 40px;
+}
+
+#bsod .small {
+    font-size: 20px;
+}
+
+#bsod .smallest {
+    font-size: 15px;
+}
+
+#bsod .qr {
+    float: left;
+    margin: 0 20px 100% 0;
+    height: 100px;
+}
+
+/* Config */
+
+#config form {
+    display: flex;
+    flex-direction: column;
+}
+
+#config input {
+    width: 100%;
+}
+
+#config button {
+    width: fit-content;
+}
+
+#config form > * {
+    margin: 5px 0;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="controls">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>htmlbsod v2.0</title>
+        <link rel="stylesheet" href="src/style/style.css" />
+        <link rel="icon" href="str/images/favicon.ico" />
+    </head>
+    <body>
+        <div id="controls">
+            <div class="main-wrapper">
+                htmlbsod v2.0
+                <div class="buttobsod v2.0 n-wrapper">
+                    <button type="button" id="config-button">
+                        Configure...
+                    </button>
+                    <button type="button" id="start-button">Start!</button>
+                </div>
+                <small>
+                    Clicking on Start will open full screen mode. You will also
+                    not be able to see or use your mouse inside this mode in
+                    order to be more similar to the actual blue screen. Press
+                    escape to exit.
+                </small>
+            </div>
+        </div>
+        <div id="bsod">
+            <div class="main-wrapper">
+                <div class="pos-wrapper">
+                    <div class="emoticon">:(</div>
+                    <div class="text">
+                        <span class="main"></span><br />
+                        <br />
+                        <span class="percent">0</span
+                        ><span class="complete"></span><br />
+                        <br />
+                    </div>
+                    <div>
+                        <img src="src/images/qr.svg" class="qr" />
+                        <div class="small">
+                            <span class="support"></span><br />
+                            <br />
+                        </div>
+                        <div class="smallest">
+                            <span class="stopcodeinfo"></span><br />
+                            <span class="stopcode"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <dialog id="config">
+            <div class="main-wrapper">
+                <small>
+                    You can leave any of these blank for the default.
+                </small>
+                <form action="index.html">
+                    <label>
+                        Emoticon:
+                        <input type="text" name="emoticon" placeholder=":(" />
+                    </label>
+                    <label>
+                        Main message:
+                        <input
+                            type="text"
+                            name="main"
+                            placeholder="Your PC ran into a problem and needs to restart. We're just collecting some error info, and then we'll restart for you."
+                        />
+                    </label>
+                    <label>
+                        Complete message:
+                        <input
+                            type="text"
+                            name="complete"
+                            placeholder="% complete"
+                        />
+                    </label>
+                    <label>
+                        Support link message:
+                        <input
+                            type="text"
+                            name="support"
+                            placeholder="For more information about this issue and possible fixes, visit https://windows.com/stopcode"
+                        />
+                    </label>
+                    <label>
+                        Stop code information message:
+                        <input
+                            type="text"
+                            name="stopcodeinfo"
+                            placeholder="If you call a support person, give them this info:"
+                        />
+                    </label>
+                    <label>
+                        Stop code message:
+                        <input
+                            type="text"
+                            name="stopcode"
+                            placeholder="Stop code: SYSTEM_SERVICE_EXCEPTION"
+                        />
+                    </label>
+                    <label>
+                        Background color:
+                        <input
+                            type="color"
+                            name="bg"
+                            value="#0c7ed2"
+                        />
+                    </label>
+                    <label>
+                        Font color:
+                        <input
+                            type="color"
+                            name="color"
+                            value="#ffffff"
+                        />
+                    </label>
+                    <label>
+                        Font:
+                        <input
+                            type="text"
+                            name="font"
+                            placeholder="Segoe UI"
+                        />
+                    </label>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </dialog>
+    </body>
+    <script src="src/script/script.js"></script>
+</html>
