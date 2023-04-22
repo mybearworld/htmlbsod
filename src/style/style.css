@@ -24,7 +24,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
     font-family: var(--ui-font-family);
     font-size: var(--ui-font-size);
     background: none;
@@ -47,7 +48,7 @@ small {
 }
 
 /* Main */
-body > div {
+body>div {
     display: none;
 }
 
@@ -62,6 +63,7 @@ body > div {
 /* Controls */
 #controls {
     height: 100%;
+    margin: 0 20px;
 }
 
 #controls .main-wrapper {
@@ -125,13 +127,13 @@ body > div {
 }
 
 /* Config */
-
 #config form {
     display: flex;
     flex-direction: column;
 }
 
-#config input {
+#config input,
+#config select {
     width: 100%;
 }
 
@@ -139,6 +141,17 @@ body > div {
     width: fit-content;
 }
 
-#config form > * {
+#config form>* {
     margin: 5px 0;
+}
+
+#config .presets {
+    float: right;
+}
+
+#config .presets button {
+    border: 0;
+    padding: 0;
+    font-size: var(--ui-small-font-size);
+    margin: 0 5px;
 }
