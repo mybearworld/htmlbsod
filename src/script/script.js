@@ -98,7 +98,7 @@
                 params.append(key, value);
             }
         });
-        location.href = `/?${params}`;
+        location.href = `?${params}`;
     });
     document.querySelector("#reset-button").addEventListener("click", (e) => {
         if (!confirm("Reset this configuration to the default?")) {
@@ -115,11 +115,11 @@
         .querySelector("#microsoft-support")
         .addEventListener("click", () => {
             document.querySelector("#config form [name=image]").value =
-                "/src/images/support.svg";
+                "src/images/support.svg";
         });
     document.querySelector("#nggyu").addEventListener("click", () => {
         document.querySelector("#config form [name=image]").value =
-            "/src/images/nggyu.svg";
+            "src/images/nggyu.svg";
     });
 
     // Copy button
