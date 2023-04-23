@@ -253,7 +253,13 @@
                                 Default
                             </button>
                         </div>
-                        <input type="number" name="speed" placeholder="Speed" />
+                        <input
+                            type="number"
+                            name="speed"
+                            placeholder="Speed"
+                            min="0"
+                            step="any"
+                        />
                     </label>
                     <label>
                         Stopping point:
@@ -261,17 +267,15 @@
                             <button type="button" data-val="default">
                                 99 (Default)
                             </button>
-                            <button type="button" data-val="100">
-                                100
-                            </button>
-                            <button type="button" data-val="101">
-                                101
-                            </button>
+                            <button type="button" data-val="100">100</button>
+                            <button type="button" data-val="101">101</button>
                         </div>
                         <input
                             type="number"
                             name="stoppingPoint"
                             placeholder="Stopping point"
+                            min="0"
+                            step="any"
                         />
                     </label>
                     <div class="buttons">
