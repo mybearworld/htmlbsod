@@ -4,14 +4,14 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>htmlbsod v2.1</title>
+        <title>htmlbsod v2</title>
         <link rel="stylesheet" href="src/style/style.css" />
         <link rel="icon" href="src/images/favicon.ico" />
     </head>
     <body>
         <div id="controls">
             <div class="main-wrapper">
-                htmlbsod v2.1
+                htmlbsod v2
                 <div class="button-wrapper">
                     <button type="button" id="config-button">
                         Configure...
@@ -62,10 +62,29 @@
                 <form action="index.html">
                     <label>
                         Emoticon:
+                        <div class="presets" data-for="emoticon">
+                            <button type="button" data-val="default">
+                                :( (Default)
+                            </button>
+                            <button type="button" data-val=":)">:)</button>
+                            <button type="button" data-val="&gt;:)">
+                                &gt;:)
+                            </button>
+                            <button type="button" data-val="&gt;:)">
+                                &gt;:(
+                            </button>
+                            <button type="button" data-val=":O">:O</button>
+                            <button type="button" data-val=":D">:D</button>
+                        </div>
                         <input type="text" name="emoticon" placeholder=":(" />
                     </label>
                     <label>
                         Main message:
+                        <div class="presets" data-for="main">
+                            <button type="button" data-val="default">
+                                Default
+                            </button>
+                        </div>
                         <input
                             type="text"
                             name="main"
@@ -74,6 +93,20 @@
                     </label>
                     <label>
                         Complete message:
+                        <div class="presets" data-for="complete">
+                            <button type="button" data-val="default">
+                                % complete (Default)
+                            </button>
+                            <button type="button" data-val="% deleted">
+                                % deleted
+                            </button>
+                            <button
+                                type="button"
+                                data-val="% done wasting your time"
+                            >
+                                % done wasting your time
+                            </button>
+                        </div>
                         <input
                             type="text"
                             name="complete"
@@ -82,6 +115,17 @@
                     </label>
                     <label>
                         Support link message:
+                        <div class="presets" data-for="support">
+                            <button type="button" data-val="default">
+                                Default
+                            </button>
+                            <button
+                                type="button"
+                                data-val="For more information about this issue and possible fixes, visit https://youtu.be/dQw4w9WgXcQ"
+                            >
+                                Never Gonna Give You Up
+                            </button>
+                        </div>
                         <input
                             type="text"
                             name="support"
@@ -90,6 +134,11 @@
                     </label>
                     <label>
                         Stop code information message:
+                        <div class="presets" data-for="stopCodeInfo">
+                            <button type="button" data-val="default">
+                                Default
+                            </button>
+                        </div>
                         <input
                             type="text"
                             name="stopCodeInfo"
@@ -98,6 +147,29 @@
                     </label>
                     <label>
                         Stop code message:
+                        <div class="presets" data-for="stopCode">
+                            <button type="button" data-val="default">
+                                System Exception (Default)
+                            </button>
+                            <button
+                                type="button"
+                                data-val="Stop Code: HAL_INITIALIZATION_FAILED"
+                            >
+                                Initialization Failed
+                            </button>
+                            <button
+                                type="button"
+                                data-val="Stop Code: PAGE_FAULT_IN_NON_PAGED_AREA"
+                            >
+                                Page Fault
+                            </button>
+                            <button
+                                type="button"
+                                data-val="Stop Code: MANUALLY_INITIATED_CRASH"
+                            >
+                                Manual
+                            </button>
+                        </div>
                         <input
                             type="text"
                             name="stopCode"
@@ -106,26 +178,68 @@
                     </label>
                     <label>
                         Background color:
+                        <div class="presets" data-for="bg">
+                            <button type="button" data-val="default">
+                                Blue (Windows 10, Default)
+                            </button>
+                            <button type="button" data-val="#000000">
+                                Black (Windows 11)
+                            </button>
+                            <button type="button" data-val="#2f7a28">
+                                Green (Insider)
+                            </button>
+                            <button type="button" data-val="#ffffff">
+                                White
+                            </button>
+                        </div>
                         <input type="color" name="bg" value="#0c7ed2" />
                     </label>
                     <label>
                         Font color:
+                        <div class="presets" data-for="color">
+                            <button type="button" data-val="default">
+                                White (Default)
+                            </button>
+                            <button type="button" data-val="#0c7ed2">
+                                Blue (Windows 10)
+                            </button>
+                            <button type="button" data-val="#000000">
+                                Black (Windows 11)
+                            </button>
+                            <button type="button" data-val="#2f7a28">
+                                Green (Insider)
+                            </button>
+                        </div>
                         <input type="color" name="color" value="#ffffff" />
                     </label>
                     <label>
                         Font:
+                        <div class="presets" data-for="font">
+                            <button type="button" data-val="default">
+                                Segoe UI (Default)
+                            </button>
+                            <button type="button" data-val="monospace">
+                                monospace
+                            </button>
+                            <button type="button" data-val="Comic Sans MS">
+                                Comic Sans
+                            </button>
+                        </div>
                         <input type="text" name="font" placeholder="Font" />
                     </label>
                     <label>
                         Image Link:
-                        <span class="presets"
-                            ><button type="button" id="microsoft-support">
-                                Microsoft Support
+                        <div class="presets" data-for="image">
+                            <button type="button" data-val="default">
+                                Microsoft Support (Default)
                             </button>
-                            <button type="button" id="nggyu">
+                            <button
+                                type="button"
+                                data-val="src/images/nggyu.svg"
+                            >
                                 Never Gonna Give You Up
-                            </button></span
-                        >
+                            </button>
+                        </div>
                         <input
                             type="text"
                             name="image"
@@ -134,10 +248,26 @@
                     </label>
                     <label>
                         Speed:
+                        <div class="presets" data-for="image">
+                            <button type="button" data-val="default">
+                                Default
+                            </button>
+                        </div>
                         <input type="number" name="speed" placeholder="Speed" />
                     </label>
                     <label>
                         Stopping point:
+                        <div class="presets" data-for="stoppingPoint">
+                            <button type="button" data-val="default">
+                                99 (Default)
+                            </button>
+                            <button type="button" data-val="100">
+                                100
+                            </button>
+                            <button type="button" data-val="101">
+                                101
+                            </button>
+                        </div>
                         <input
                             type="number"
                             name="stoppingPoint"

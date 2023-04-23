@@ -1,4 +1,6 @@
 (() => {
+    "use strict";
+
     // Functions / Constants
     const getParams = () => {
         let obj = {};
@@ -50,7 +52,7 @@
         color: "#ffffff",
         speed: "1",
         stoppingPoint: "99",
-        image: "/src/images/support.svg",
+        image: "src/images/support.svg",
     };
 
     // Add functionality to buttons
@@ -111,15 +113,15 @@
     });
 
     // Presets
-    document
-        .querySelector("#microsoft-support")
-        .addEventListener("click", () => {
-            document.querySelector("#config form [name=image]").value =
-                "src/images/support.svg";
+    [...document.querySelectorAll(".presets button")].forEach((el) => {
+        el.addEventListener("click", (e) => {
+            const target = e.target;
+            const value = target.dataset.val;
+            const element = target.parentElement.dataset.for;
+            document.querySelector(
+                `[name=${element}]`
+            ).value = value === "default" ? defaults[element] : value;
         });
-    document.querySelector("#nggyu").addEventListener("click", () => {
-        document.querySelector("#config form [name=image]").value =
-            "src/images/nggyu.svg";
     });
 
     // Copy button

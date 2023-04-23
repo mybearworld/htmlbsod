@@ -9,7 +9,6 @@
     --ui-border-radius: 5px;
     --ui-small-font-size: 14px;
     --ui-font-size: 20px;
-    --ui-red: red;
 }
 
 :not(dialog) {
